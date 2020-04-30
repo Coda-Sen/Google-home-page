@@ -4,10 +4,11 @@
 }
 
 main {
-    margin-top: 198px;
+    margin-top: 142px;
 }
 body {
     min-width: 720px;
+    max-width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -15,8 +16,8 @@ button {
     border-radius: 2px;
 }
 header {
-    padding-right: 14px; 
-    padding-top: 16px;
+    margin-top: 16px;
+    padding-right: 22px; 
     height: 30px;
     vertical-align: middle;
 }
@@ -27,19 +28,12 @@ a {
 a:hover {
     text-decoration: underline;
 }
-ul {
-    height: inherit;
-    margin: inherit;
-}
-li {
-    display: inline-block;
-    font-size: 0.8em;
-    float: right;
-    margin: auto 16px auto 0px;
-    height: 30px;
-}
 footer {
-    margin: 1em 5% 1em;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px solid #E4E4E4;
+    background-color: #F2F2F2;
 }
 input:hover, input:focus {
     box-shadow: 0px 2px 6px -1px lightgrey;
@@ -59,9 +53,9 @@ input:hover, input:focus {
 .blueb {
     color: white;
     background-color: #4485F4;
+    height: 30px;
     font-size: 1em;
     font-weight: bold;
-    height: 100%;
     width: 71px;
     margin: 0;
     border: none;
@@ -81,9 +75,8 @@ input:hover, input:focus {
     filter: brightness(60%)
 }
 .toplist {
-    /* vertical-align: middle;*/
-    margin-top: 7px;
-    margin-bottom: 7px;
+    color: #424242;
+    text-decoration: none;
 }
 .squares {
     display: inline-block;
@@ -92,6 +85,51 @@ input:hover, input:focus {
     text-align: center;
     border: 3px solid transparent;
 }
+.flex-header {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.flexh-item {
+    font-size: 0.8em;
+    flex: 0 0 auto;
+    height: auto;
+    padding: 0px 8px;
+}
+
+/*footer*/
+
+.flex-footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.f1 {
+    font-size: inherit;
+    color: inherit;
+    flex: 0 0 auto;
+}
+.f2 {
+    font-size: inherit;
+    color: inherit;
+    flex: 0 0 auto;
+}
+.footer-bar {
+    color: #6F6F6F;
+    font-size: 0.85em;
+    padding: 15px 20px;
+}
+.footer-item {
+    font-size: inherit;
+    color: inherit;
+    height: 10px;
+    margin: 0px 10px;
+}
+
+
+/*IDs*/
+
 #searchicon {
     position: relative;
     left: 32px;
@@ -121,6 +159,8 @@ input:hover, input:focus {
     margin-left: 4px;
 }
 
+/*media queries*/
+
 @media screen and (min-width: 1280px) {
     body {
         min-width: 1028px;
@@ -129,4 +169,3 @@ input:hover, input:focus {
         width: 584px;
     }
 }
-
